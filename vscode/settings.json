@@ -3,12 +3,6 @@
     "workbench.editor.untitled.hint": "hidden",
     "editor.fontFamily": "Cica, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 16,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true,
-    },
-    "editor.formatOnSave": false,
-    "eslint.packageManager": "yarn",
-    "typescript.tsdk": "./node_modules/typescript/lib",
     "terminal.integrated.cursorStyle": "line",
     "workbench.iconTheme": "material-icon-theme",
     "files.trimTrailingWhitespace": true,
@@ -18,6 +12,9 @@
     "vscode-neovim.neovimInitVimPaths.darwin": "/Users/shun.yamazaki/.config/nvim/init.vim",
     "terminal.integrated.fontSize": 16,
     "cSpell.userWords": [
-        "browserslist"
-    ]
+        "browserslist",
+        "preinstall",
+        "stylelint",
+        "typesync"
+    ],
 }
