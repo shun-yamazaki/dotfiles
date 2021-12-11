@@ -70,8 +70,39 @@
       "description": "Insert to escape or right command lazy",
       "manipulators": [
         {
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 1241,
+                  "product_id": 1049
+                }
+              ]
+            }
+          ],
           "from": {
             "key_code": "insert",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_command",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "escape"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "right_command",
             "modifiers": {
               "optional": ["any"]
             }
