@@ -8,12 +8,8 @@
           "from": {
             "key_code": "h",
             "modifiers": {
-              "mandatory": [
-                "left_command"
-              ],
-              "optional": [
-                "any"
-              ]
+              "mandatory": ["left_command"],
+              "optional": ["any"]
             }
           },
           "to": [
@@ -27,12 +23,8 @@
           "from": {
             "key_code": "j",
             "modifiers": {
-              "mandatory": [
-                "left_command"
-              ],
-              "optional": [
-                "any"
-              ]
+              "mandatory": ["left_command"],
+              "optional": ["any"]
             }
           },
           "to": [
@@ -46,12 +38,8 @@
           "from": {
             "key_code": "k",
             "modifiers": {
-              "mandatory": [
-                "left_command"
-              ],
-              "optional": [
-                "any"
-              ]
+              "mandatory": ["left_command"],
+              "optional": ["any"]
             }
           },
           "to": [
@@ -65,12 +53,8 @@
           "from": {
             "key_code": "l",
             "modifiers": {
-              "mandatory": [
-                "left_command"
-              ],
-              "optional": [
-                "any"
-              ]
+              "mandatory": ["left_command"],
+              "optional": ["any"]
             }
           },
           "to": [
@@ -83,15 +67,13 @@
       ]
     },
     {
-      "description": "Right spacebar to right command lazy",
+      "description": "Insert to escape or right command lazy",
       "manipulators": [
         {
           "from": {
-            "key_code": "spacebar",
+            "key_code": "insert",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [
@@ -102,7 +84,7 @@
           ],
           "to_if_alone": [
             {
-              "key_code": "spacebar"
+              "key_code": "escape"
             }
           ],
           "type": "basic"
