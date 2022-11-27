@@ -11,4 +11,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+## Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 eval "$(anyenv init -)"
