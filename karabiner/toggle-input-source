@@ -1,0 +1,18 @@
+{
+    "description": "CapsLock to Toggle Input Source",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "caps_lock",
+                "modifiers": { "optional": ["any"] }
+            },
+            "to_if_alone": [
+                {
+                    "key_code": "spacebar",
+                    "modifiers": ["left_option"]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
