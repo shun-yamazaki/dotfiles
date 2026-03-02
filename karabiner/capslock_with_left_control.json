@@ -1,0 +1,16 @@
+{
+    "description": "LeftControl + CapsLock = Original CapsLock",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "caps_lock",
+                "modifiers": {
+                    "mandatory": ["left_control"],
+                    "optional": ["any"]
+                }
+            },
+            "to": [{ "key_code": "caps_lock" }],
+            "type": "basic"
+        }
+    ]
+}
