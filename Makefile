@@ -31,6 +31,7 @@ bundle-all:
 config-setup:
 	@echo "🛠  Deploying configuration files..."
 	@mkdir -p ~/.config/sheldon ~/.config/nvim ~/.config/karabiner
+	@mkdir -p "$(VSCODE_SETTING_DIR)"
 
 	$(call link_file,$(PWD)/.zshrc,$(HOME)/.zshrc)
 	$(call link_file,$(PWD)/plugins.toml,$(HOME)/.config/sheldon/plugins.toml)
