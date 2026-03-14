@@ -29,7 +29,7 @@ brew-install:
 brew_bin = $(shell [ -f /opt/homebrew/bin/brew ] && echo /opt/homebrew/bin/brew || echo /usr/local/bin/brew)
 
 bundle-all:
-	$(brew_bin) bundle --file=Brewfile
+	$(brew_bin) bundle --file=Brewfile --verbose
 
 config-setup:
 	@echo "🛠  Deploying configuration files..."

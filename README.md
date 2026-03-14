@@ -43,6 +43,9 @@ source ~/.zshrc
 ### 6. Claude Code
 - [ ] **認証**: `claude` コマンドを実行し、ブラウザ経由でログイン。
 
+### ServBay（手動インストール必要）
+- [ ] https://www.servbay.com/download から .dmg をダウンロードしてインストール
+
 ---
 
 ### ツール動作確認
