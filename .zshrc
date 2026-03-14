@@ -1,38 +1,56 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# --- Homebrew Setup ---
+if [[ -f /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# --- Plugin Manager (Sheldon) ---
+# zsh-autosuggestions, syntax-highlighting 等を爆速で読み込み
+if [[ $(command -v sheldon) ]]; then
+  eval "$(sheldon source)"
+
+  # 補完機能の有効化
+  autoload -Uz compinit && compinit
 fi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# --- Tool Initializations ---
+[[ $(command -v mise) ]] && eval "$(mise activate zsh)"
+# 補完や見た目の設定
+[[ $(command -v starship) ]] && eval "$(starship init zsh)"
+# スマートな cd
+[[ $(command -v zoxide) ]] && eval "$(zoxide init zsh)"
+# 履歴検索
+[[ $(command -v fzf) ]] && source <(fzf --zsh)
+# --- AWS CLI Completion ---
+[[ $(command -v aws) ]] && source /opt/homebrew/bin/aws_zsh_completer.sh
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
-eval "$(anyenv init -)"
-
-## ctrl + r で過去に実行したコマンドを選択できるようにする。
-function peco-select-history() {
-  BUFFER=$(\history -n -r 1 | peco --query "$LBUFFER")
-  CURSOR=$#BUFFER
-  zle clear-screen
-}
-zle -N peco-select-history
-bindkey '^r' peco-select-history
-
-# setopt
+# --- Zsh Options ---
+# --- History Settings ---
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt share_history           # インスタンス間で履歴を共有
+setopt hist_reduce_blanks      # 余分なスペースを削除して記録
 setopt no_beep
+setopt hist_ignore_all_dups # 履歴の重複を無視
 
-# alias
+# --- Aliases (Modern Tools) ---
+if [[ $(command -v eza) ]]; then
+  alias ls='eza --icons --git'
+  alias ll='eza -al --icons --git'
+  alias tree='eza --tree --icons'
+fi
+
+if [[ $(command -v bat) ]]; then
+  alias cat='bat'
+fi
+
+# --- Aliases (Safety & Neovim) ---
 alias vi="nvim"
 alias vim="nvim"
 alias view="nvim -R"
-
 alias rm="rm -i"
 alias mv="mv -i"
 alias cp="cp -i"
+
+# --- Functions ---
+# 必要であればここに独自の関数を追加

@@ -1,0 +1,62 @@
+{
+  // --- UI / Appearance ---
+  "workbench.startupEditor": "none",
+  "workbench.editor.untitled.hint": "hidden",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Kanagawa Paper",
+  // --- Editor Basics ---
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', 'JetBrains Mono', monospace",
+  "editor.fontSize": 16,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 1.6,
+  "editor.suggestSelection": "first",
+  "editor.semanticHighlighting.enabled": true,
+  // --- Files & Search ---
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/vendor": true,
+    "**/tmp": true,
+    "**/cache": true,
+    "**/*.log": true
+  },
+  // --- Terminal ---
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+  "terminal.integrated.cursorStyle": "line",
+  // --- Language Specific & Formatter ---
+  "[php]": {
+    "editor.defaultFormatter": "DEVSENSE.phptools-vscode",
+    "editor.formatOnSave": true
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml",
+    "editor.formatOnSave": true
+  },
+  // --- Emmet (HTML/CSS Speed Coding) ---
+  "emmet.includeLanguages": {
+    "php": "html",
+    "cakephp": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  // --- Extension Settings ---
+  "todo-tree.tree.showScanModeButtons": false,
+  "indentRainbow.colors": ["rgba(255,255,255,0.02)", "rgba(255,255,255,0.05)"]
+}

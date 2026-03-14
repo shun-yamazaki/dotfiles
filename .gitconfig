@@ -1,0 +1,36 @@
+[user]
+	name = shun-yamazaki
+	email = 30379968+shun-yamazaki@users.noreply.github.com
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJXfq6O8fSmjtP1JTZoq1eeoAse9P8nUmy8c+z3WJjpz
+
+[core]
+	editor = nvim
+	excludesfile = ~/.gitignore_global
+
+[commit]
+	gpgsign = true
+
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+
+[init]
+	defaultBranch = main
+
+[push]
+	# git push した時に自動的にアップストリームを追跡する設定
+	autoSetupRemote = true
+
+[rebase]
+    # fixup! コミットなどを自動でまとめる
+	autoSquash = true
+
+[alias]
+    # よく使うショートカット
+    st = status
+    co = checkout
+    br = branch
+    cm = commit
+    graph = log --graph --date=short --decorate=short --pretty=format:'%C(yellow)%h%Creset %C(magenta)%cd%Creset %C(cyan)%an%Creset %s %C(red)%d%Creset'
