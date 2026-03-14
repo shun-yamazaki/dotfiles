@@ -25,20 +25,17 @@ brew-install:
 	fi
 	@echo "✅ Homebrew is ready."
 
-# Apple Silicon (M1/M2/M3) は /opt/homebrew、Intel Mac は /usr/local
-brew_bin = $(shell [ -f /opt/homebrew/bin/brew ] && echo /opt/homebrew/bin/brew || echo /usr/local/bin/brew)
-
 bundle-all:
-	$(brew_bin) bundle --file=Brewfile --verbose
+	brew bundle --file=Brewfile --verbose
 
 config-setup:
 	@echo "🛠  Deploying configuration files..."
 	@mkdir -p ~/.config/sheldon ~/.config/nvim ~/.config/karabiner
 
-	$(call link_file, $(PWD)/.zshrc, $(HOME)/.zshrc)
-	$(call link_file, $(PWD)/plugins.toml, $(HOME)/.config/sheldon/plugins.toml)
-	$(call link_file, $(PWD)/init.lua, $(HOME)/.config/nvim/init.lua)
-	$(call link_file, $(PWD)/.gitconfig, $(HOME)/.gitconfig)
-	$(call link_file, $(PWD)/.gitignore_global, $(HOME)/.gitignore_global)
-	$(call link_file, $(PWD)/settings.json, "$(VSCODE_SETTING_DIR)/settings.json")
-	$(call link_file, $(PWD)/karabiner.json, $(HOME)/.config/karabiner/karabiner.json)
+	$(call link_file,$(PWD)/.zshrc,$(HOME)/.zshrc)
+	$(call link_file,$(PWD)/plugins.toml,$(HOME)/.config/sheldon/plugins.toml)
+	$(call link_file,$(PWD)/init.lua,$(HOME)/.config/nvim/init.lua)
+	$(call link_file,$(PWD)/.gitconfig,$(HOME)/.gitconfig)
+	$(call link_file,$(PWD)/.gitignore_global,$(HOME)/.gitignore_global)
+	$(call link_file,$(PWD)/vscode/settings.json,$(VSCODE_SETTING_DIR)/settings.json)
+	$(call link_file,$(PWD)/karabiner/karabiner.json,$(HOME)/.config/karabiner/karabiner.json)
