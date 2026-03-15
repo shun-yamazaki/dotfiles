@@ -19,7 +19,7 @@
     "**/vendor": true,
     "**/tmp": true,
     "**/cache": true,
-    "**/*.log": true
+    "**/*.log": true,
   },
   // --- Terminal ---
   "terminal.integrated.fontSize": 16,
@@ -28,35 +28,37 @@
   // --- Language Specific & Formatter ---
   "[php]": {
     "editor.defaultFormatter": "DEVSENSE.phptools-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   // --- Emmet (HTML/CSS Speed Coding) ---
   "emmet.includeLanguages": {
     "php": "html",
-    "cakephp": "html"
+    "cakephp": "html",
   },
   "emmet.triggerExpansionOnTab": true,
   // --- Extension Settings ---
   "todo-tree.tree.showScanModeButtons": false,
-  "indentRainbow.colors": ["rgba(255,255,255,0.02)", "rgba(255,255,255,0.05)"]
+  "indentRainbow.colors": ["rgba(255,255,255,0.02)", "rgba(255,255,255,0.05)"],
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
 }
