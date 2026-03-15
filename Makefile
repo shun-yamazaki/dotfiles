@@ -38,5 +38,5 @@ config-setup:
 	$(call link_file,$(PWD)/init.lua,$(HOME)/.config/nvim/init.lua)
 	$(call link_file,$(PWD)/.gitconfig,$(HOME)/.gitconfig)
 	$(call link_file,$(PWD)/.gitignore_global,$(HOME)/.gitignore_global)
-	$(call link_file,$(PWD)/vscode/settings.json,$(VSCODE_SETTING_DIR)/settings.json)
-	$(call link_file,$(PWD)/karabiner/karabiner.json,$(HOME)/.config/karabiner/karabiner.json)
+	$(call link_file,$(PWD)/settings.json,$(VSCODE_SETTING_DIR)/settings.json)
+	$(call link_file,$(PWD)/karabiner.json,$(HOME)/.config/karabiner/karabiner.json)
