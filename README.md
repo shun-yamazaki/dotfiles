@@ -19,7 +19,8 @@ source ~/.zshrc
 ## セットアップ完了後の確認・設定リスト
 
 ### 1. iTerm2 の設定
-- [ ] **Font**: `Settings` > `Profiles` > `Text` > `Font` で `JetBrainsMono Nerd Font` を選択。
+- [ ] **Theme**: https://github.com/rebelot/kanagawa.nvim/tree/master/extras から `kanagawa.itermcolors` をダウンロードし、`Settings` > `Profiles` > `Colors` > `Color Presets` > `Import` で読み込む。
+- [ ] **Font**: `Settings` > `Profiles` > `Text` > `Font` で `JetBrainsMono Nerd Font` を選択、サイズは `16`。
 - [ ] **Ligatures**: 同じ画面の `Use Ligatures` にチェックを入れる。
 - [ ] **Terminal**: `Profiles` > `Terminal` > `Report terminal type` を `xterm-256color` に設定。
 

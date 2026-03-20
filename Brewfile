@@ -74,7 +74,7 @@ brew "awscli"
 brew "s5cmd"
 
 # --- VS Code / Cursor Extensions ---
-# --- Theme & UI (Kanagawa & Material Icons) ---
+# --- Theme & UI ---
 vscode "SimonHo.kanagawa-paper"
 vscode "pkief.material-icon-theme"
 vscode "oderwat.indent-rainbow"
