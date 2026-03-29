@@ -85,7 +85,6 @@ vscode "Gruntfuggly.todo-tree"
 vscode "DEVSENSE.phptools-vscode"          # PHP IntelliSense & Refactoring
 vscode "DEVSENSE.intelli-php-vscode"       # Smart AI completion for PHP
 vscode "DEVSENSE.profiler-php-vscode"      # PHP Profiler
-vscode "bmewburn.vscode-intelephense-client" # Advanced PHP static analysis
 vscode "xdebug.php-debug"                  # Xdebug support
 
 # --- HTML & CSS & Frontend ---

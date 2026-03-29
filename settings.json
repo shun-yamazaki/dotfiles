@@ -4,13 +4,21 @@
   "workbench.editor.untitled.hint": "hidden",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Kanagawa Paper",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
   // --- Editor Basics ---
   "editor.fontFamily": "'JetBrainsMono Nerd Font', 'JetBrains Mono', monospace",
-  "editor.fontSize": 16,
-  "editor.fontLigatures": true,
+  "editor.fontSize": 12,
+  "editor.fontLigatures": false,
   "editor.lineHeight": 1.6,
   "editor.suggestSelection": "first",
   "editor.semanticHighlighting.enabled": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  // --- Diff Editor ---
+  "diffEditor.maxComputationTime": 0,
+  "diffEditor.renderSideBySide": true,
   // --- Files & Search ---
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
@@ -19,41 +27,52 @@
     "**/vendor": true,
     "**/tmp": true,
     "**/cache": true,
-    "**/*.log": true,
+    "**/*.log": true
   },
   // --- Terminal ---
-  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontSize": 12,
   "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
   "terminal.integrated.cursorStyle": "line",
+  // --- Git ---
+  "git.confirmSync": false,
   // --- Language Specific & Formatter ---
   "[php]": {
     "editor.defaultFormatter": "DEVSENSE.phptools-vscode",
     "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
   "[toml]": {
     "editor.defaultFormatter": "tamasfe.even-better-toml",
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
   },
-  // --- Emmet (HTML/CSS Speed Coding) ---
+  // --- Emmet ---
   "emmet.includeLanguages": {
     "php": "html",
-    "cakephp": "html",
+    "cakephp": "html"
   },
   "emmet.triggerExpansionOnTab": true,
   // --- Extension Settings ---
@@ -61,4 +80,5 @@
   "indentRainbow.colors": ["rgba(255,255,255,0.02)", "rgba(255,255,255,0.05)"],
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "claudeCode.preferredLocation": "panel"
 }

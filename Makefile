@@ -33,7 +33,12 @@ config-setup:
 	@mkdir -p ~/.config/sheldon ~/.config/nvim ~/.config/karabiner
 	@mkdir -p "$(VSCODE_SETTING_DIR)"
 
-	$(call link_file,$(PWD)/.zshrc,$(HOME)/.zshrc)
+	@if [ -f "$(HOME)/.zshrc" ] && [ ! -L "$(HOME)/.zshrc" ]; then \
+		echo "📦 Backing up $(HOME)/.zshrc to $(HOME)/.zshrc.bak"; \
+		mv "$(HOME)/.zshrc" "$(HOME)/.zshrc.bak"; \
+	fi
+	@cp "$(PWD)/.zshrc" "$(HOME)/.zshrc"
+	@echo "📄 Copied: .zshrc"
 	$(call link_file,$(PWD)/plugins.toml,$(HOME)/.config/sheldon/plugins.toml)
 	$(call link_file,$(PWD)/init.lua,$(HOME)/.config/nvim/init.lua)
 	$(call link_file,$(PWD)/.gitconfig,$(HOME)/.gitconfig)
