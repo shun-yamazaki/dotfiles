@@ -21,7 +21,6 @@ source ~/.zshrc
 ### 1. iTerm2 の設定
 - [ ] **Theme**: https://github.com/rebelot/kanagawa.nvim/tree/master/extras から `kanagawa.itermcolors` をダウンロードし、`Settings` > `Profiles` > `Colors` > `Color Presets` > `Import` で読み込む。
 - [ ] **Font**: `Settings` > `Profiles` > `Text` > `Font` で `JetBrainsMono Nerd Font` を選択、サイズは `16`。
-- [ ] **Ligatures**: 同じ画面の `Use Ligatures` にチェックを入れる。
 - [ ] **Terminal**: `Profiles` > `Terminal` > `Report terminal type` を `xterm-256color` に設定。
 
 ### 2. 1Password (SSH署名)
@@ -43,9 +42,6 @@ source ~/.zshrc
 
 ### 6. Claude Code
 - [ ] **認証**: `claude` コマンドを実行し、ブラウザ経由でログイン。
-
-### ServBay（手動インストール必要）
-- [ ] https://www.servbay.com/download から .dmg をダウンロードしてインストール
 
 ---
 

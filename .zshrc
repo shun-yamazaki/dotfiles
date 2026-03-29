@@ -63,4 +63,17 @@ alias mv="mv -i"
 alias cp="cp -i"
 
 # --- 関数 ---
-# 必要であればここに追加
+awsp() {
+  if [[ "$1" == "unset" ]]; then
+    unset AWS_PROFILE
+    echo "AWS_PROFILE unset"
+    return
+  fi
+
+  local profile
+  profile=$(aws configure list-profiles 2>/dev/null | fzf --prompt="AWS Profile> " --layout=reverse)
+  [[ -z "$profile" ]] && return
+
+  export AWS_PROFILE="$profile"
+  echo "AWS_PROFILE=$AWS_PROFILE"
+}

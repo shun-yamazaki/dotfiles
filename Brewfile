@@ -1,18 +1,10 @@
 # --- Fonts ---
 cask "font-jetbrains-mono-nerd-font"
 
-# --- File Management & Transfer ---
-cask "forklift"
-cask "transmit"
-
-# --- Web Development ---
-cask "mamp"
-
 # --- Editors & AI Tools ---
 cask "claude"
 cask "claude-code"
 cask "visual-studio-code"
-cask "cursor"
 
 # --- Infrastructure & Database ---
 cask "docker"
@@ -22,14 +14,12 @@ cask "tableplus"
 # --- System Utilities ---
 cask "1password"
 cask "raycast"
-cask "cleanshot"
 cask "appcleaner"
 cask "karabiner-elements"
 cask "google-japanese-ime"
 
 # --- Communication & Collaboration ---
 cask "slack"
-cask "chatwork"
 cask "zoom"
 cask "notion"
 

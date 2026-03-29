@@ -7,9 +7,10 @@ VSCODE_SETTING_DIR = $(HOME)/Library/Application\ Support/Code/User
 # $(1): ソースファイル（リポジトリ内）
 # $(2): ターゲット（ホームディレクトリなど）
 define link_file
-	@if [ -f "$(2)" ] && [ ! -L "$(2)" ]; then \
-		echo "📦 Backing up $(2) to $(2).bak"; \
-		mv "$(2)" "$(2).bak"; \
+	@if [ -e "$(2)" ] || [ -L "$(2)" ]; then \
+		_bak="$(2).bak.$$(date +%Y%m%d_%H%M%S)"; \
+		echo "📦 Backing up $(2) to $$_bak"; \
+		mv "$(2)" "$$_bak"; \
 	fi
 	@ln -sf "$(1)" "$(2)"
 	@echo "🔗 Linked: $(2) -> $(1)"
@@ -33,9 +34,10 @@ config-setup:
 	@mkdir -p ~/.config/sheldon ~/.config/nvim ~/.config/karabiner
 	@mkdir -p "$(VSCODE_SETTING_DIR)"
 
-	@if [ -f "$(HOME)/.zshrc" ] && [ ! -L "$(HOME)/.zshrc" ]; then \
-		echo "📦 Backing up $(HOME)/.zshrc to $(HOME)/.zshrc.bak"; \
-		mv "$(HOME)/.zshrc" "$(HOME)/.zshrc.bak"; \
+	@if [ -e "$(HOME)/.zshrc" ] || [ -L "$(HOME)/.zshrc" ]; then \
+		_bak="$(HOME)/.zshrc.bak.$$(date +%Y%m%d_%H%M%S)"; \
+		echo "📦 Backing up $(HOME)/.zshrc to $$_bak"; \
+		mv "$(HOME)/.zshrc" "$$_bak"; \
 	fi
 	@cp "$(PWD)/.zshrc" "$(HOME)/.zshrc"
 	@echo "📄 Copied: .zshrc"
