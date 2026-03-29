@@ -1,13 +1,21 @@
 shell = "zsh"
 
+# Tab補完の候補をfzfのUIで表示・絞り込む
+[plugins.fzf-tab]
+github = "Aloxaf/fzf-tab"
+
+# git, docker, aws など多数のコマンドのTab補完定義を追加する
 [plugins.zsh-completions]
 github = "zsh-users/zsh-completions"
 
+# 入力中に過去の履歴をグレーで表示。→ で確定
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 
-[plugins.zsh-syntax-highlighting]
-github = "zsh-users/zsh-syntax-highlighting"
-
+# ↑↓ で入力文字列に絞り込んで履歴を遡る
 [plugins.zsh-history-substring-search]
 github = "zsh-users/zsh-history-substring-search"
+
+# 入力中のコマンドをリアルタイムで色付け（有効なコマンドは緑、無効は赤）
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"

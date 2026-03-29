@@ -39,7 +39,7 @@ require("lazy").setup({
 
   -- シンタックスハイライト (コードを爆速で綺麗に色付け)
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", config = function()
-      require("nvim-treesitter.configs").setup({ ensure_installed = { "lua", "javascript", "php", "json" }, highlight = { enable = true } })
+      require("nvim-treesitter.config").setup({ ensure_installed = { "lua", "javascript", "php", "json" }, highlight = { enable = true } })
     end },
 
   -- Git状態表示 (GitGutterの代わり)
@@ -54,13 +54,13 @@ require("lazy").setup({
     config = function()
       require("mason").setup()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "intelephense", "vtsls" } -- Lua, PHP, JS のLSP
+        ensure_installed = { "lua_ls", "intelephense", "vtsls" }, -- Lua, PHP, JS のLSP
+        handlers = {
+          function(server_name)
+            require("lspconfig")[server_name].setup {}
+          end,
+        },
       })
-      require("mason-lspconfig").setup_handlers {
-        function (server_name)
-          require("lspconfig")[server_name].setup {}
-        end,
-      }
     end
   },
 })
