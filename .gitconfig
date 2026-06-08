@@ -19,13 +19,19 @@
 [init]
 	defaultBranch = main
 
+[fetch]
+    prune = true
+
+[pull]
+    rebase = true
+
 [push]
 	# git push した時に自動的にアップストリームを追跡する設定
 	autoSetupRemote = true
 
 [rebase]
-    # fixup! コミットなどを自動でまとめる
-	autoSquash = true
+    autoSquash = true # fixup! コミットなどを自動でまとめる
+    autoStash = true
 
 [alias]
     # よく使うショートカット

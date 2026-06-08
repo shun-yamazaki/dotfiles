@@ -3,8 +3,12 @@
   "workbench.startupEditor": "none",
   "workbench.editor.untitled.hint": "hidden",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Kanagawa Paper",
+  "workbench.colorTheme": "Kanagawa Paper Ink",
   "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#4a4a6a",
+    "editor.selectionHighlightBackground": "#3a3a5a"
+  },
   // --- Editor Basics ---
   "editor.fontFamily": "'JetBrainsMono Nerd Font', 'JetBrains Mono', monospace",
   "editor.fontSize": 12,
@@ -80,5 +84,7 @@
   "indentRainbow.colors": ["rgba(255,255,255,0.02)", "rgba(255,255,255,0.05)"],
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
-  "claudeCode.preferredLocation": "panel"
+  "claudeCode.preferredLocation": "panel",
+  "editor.bracketPairColorization.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": true
 }
